@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="perfil.css">
+
+  <nav>
+    <ul class="Roda-pe">
+      <li><a href="/site/Home/Home.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Biblioteca</a></li>
+      <li><a href="#"><i class="fas fa-pen"></i> Escrever</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Minhas Obras</a></li>
+      <li class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar">
+        <i class="fas fa-search" onclick="performSearch()"></i>
+      </li>
+      <li><a href="#"><i class="fas fa-bell"></i> Notificações</a></li>
+      <li><a href="#"><i class="fas fa-comments"></i> Chat</a></li>
+      <li><a href="/site/Perfil/Perfil.html"><i class="fas fa-user"></i> Perfil</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+    </ul>
+  </nav>
+
+</head>
+
+<body>
+  <div class="profile">
+    <label for="profile-image-upload" class="profile-image-label" onmouseover="showEditButton()"
+      onmouseout="hideEditButton()">
+      <img id="profile-image" src="/site/IMG/user2.png" alt="Foto de perfil">
+    </label>
+    <input type="file" id="profile-image-upload" style="display: none" accept="image/*"
+      onchange="previewProfileImage(event)">
+    <div class="profile-info">
+      <h1>Agnês Vitória</h1>
+      <p>Me chamo Agnês Vitória, tenho 21 anos, e me considero uma pessoa extremamente apaixonada por boas escritas.</p>
+    </div>
+  </div>
+
+  <!-- Botão de editar abaixo da foto -->
+  <div class="edit-button-container">
+    <button id="edit-button" class="edit-button" onclick="showImageUpload()">Editar foto</button>
+  </div>
+
+  <nav>
+    <ul class="Roda-pe">
+      <li><a href="#"><i class="fas fa-pen"></i> Sobre</a></li>
+      <li><a href="#"><i class="fas fa-book"></i>Obras</a></li>
+      <li><a href="#"><i class="fas fa-book"></i> Mural</a></li>
+      <li><a href="#"><i class="fas fa-bell"></i> Seguidores</a></li>
+      <li><a href="#"><i class="fas fa-cog"></i> Seguindo</a></li>
+    </ul>
+  </nav>
+
+  <div class="works">
+    <h2>Obras:</h2>
+    <div class="work-container">
+
+      <div class="work-item">
+        <img src="/site/IMG/Capa_Design-do-Livro-Infantil-Ilustrado.jpg" alt="Obra 1" style="width: 150px; height: 200px;">
+        <h3>Obra 1</h3>
+        <p>Descrição da Obra 1.</p>
+        <a href="/Obra1/Obra1.html" class="access-button">Acessar</a>
+      </div>
+
+
+      <div class="work-item">
+        <img src="/site/IMG/Capa_Design-do-Livro-Infantil-Ilustrado.jpg" alt="Obra 2" style="width: 150px; height: 200px;">
+        <h3>Obra 2</h3>
+        <p>Descrição da Obra 2.</p>
+        <a href="/Obra2/Obra2.html" class="access-button">Acessar</a>
+      </div>
+
+      <div class="work-item">
+        <img src="/site/IMG/Capa_Design-do-Livro-Infantil-Ilustrado.jpg" alt="Obra 3" style="width: 150px; height: 200px;">
+        <h3>Obra 3</h3>
+        <p>Descrição da Obra 2.</p>
+        <a href="/Obra3/Obra3.html" class="access-button">Acessar</a>
+      </div>
+
+            <footer>
+              <p>&copy; 2023 Library. Todos os direitos reservados.</p>
+            </footer>
+
+            <script src="/site/Perfil/Perfil.js"></script>
+</body>
+
+</html>

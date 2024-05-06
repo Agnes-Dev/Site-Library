@@ -1,0 +1,185 @@
+* {
+  margin: 2px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  color: rgb(51, 9, 241);
+  ;
+}
+
+nav ul li a {
+  padding: 10px;
+  text-decoration: none;
+} */
+
+nav {
+  background: linear-gradient(to right, rgb(9, 187, 241), rgb(9, 187, 241), rgb(30, 98, 241), rgb(51, 9, 241));
+  color: #fff;
+  padding: 10px;
+}
+
+/* nav ul {
+  list-style: none;
+  padding: 0;
+} */
+
+nav li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 20px;
+}
+
+footer {
+  /* Mexe em "todos os direitos reservados" */
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+nav input[type="text"] {
+  /* Mexe na forma do pesquisar */
+  padding: 5px;
+  width: 150px;
+  border: 2px solid rgb(51, 9, 241);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; 
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.profile-cover img {
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin: 20px;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.works ul {
+  list-style: none;
+  padding: 0;
+}
+
+.works li {
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-image-label:hover .edit-button {
+  display: block;
+}
+
+.edit-button-container {
+  text-align: center;
+  margin-top: 20px;
+  /* Ajuste a margem conforme necessário */
+}
+
+.edit-button {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.works {
+  margin-top: 20px;
+}
+
+.work-container {
+  /*Mexe na orientação obras*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.work-item {
+  /*Mexe na margem das obras*/
+  border: 1px solid rgb(189, 190, 190);
+  background: rgb(189, 190, 190);
+  padding: 10px;  
+  width: calc(33.33% - 20px); 
+  box-sizing: border-box; 
+}
+
+
+ .access-button { 
+  /*Ajusta Botão de acessar*/
+  background: linear-gradient(to right, rgb(30, 98, 241), rgb(51, 9, 241));
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}
+.Roda-pe { 
+  /*Ajusta os menus*/
+  text-align: center;
+  box-sizing: border-box; 
+}
+
+
+

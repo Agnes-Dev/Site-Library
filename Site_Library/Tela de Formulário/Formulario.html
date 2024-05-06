@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="/Tela de Formulário/Formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="/Tela de Login/Login.html" class="form">
+            <h1 class="title">Formulário</h1>
+            <div class="inp">
+                <input type="text" name="usuario" class="input" placeholder="Usuário">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="inp">
+                <input type="text" name="email" class="input" placeholder="E-mail">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="inp">
+                <input type="password" name="senha" id="senha" class="input" placeholder="Senha">
+                <i class="fas fa-lock"></i>
+                <span class="toggle-password" onclick="togglePasswordVisibility('senha')"></span>
+            </div>
+            <div class="inp">
+                <input type="password" name="confirmar_senha" id="confirmar_senha" class="input" placeholder="Confirme sua senha">
+                <i class="fas fa-lock"></i>
+                <span class="toggle-password" onclick="togglePasswordVisibility('confirmar_senha')"></span>
+            </div>
+            <div class="inp">
+                <input type="text" name="data_nascimento" id="data_nascimento" class="input" placeholder="Data de Nascimento">
+                <i class="fas fa-calendar"></i>
+            </div>
+            <div class="inp">
+                <input type="text" name="pais" class="input" placeholder="País">
+                <i class="fas fa-globe"></i>
+            </div>
+            <button class="submit">Registrar</button>
+            <p class="footer"><a href="/Tela de Login/Login.html" class="link"> Voltar</a></p>
+        </form>
+
+        <div id="error-message" style="display: none; color: red;">
+            As senhas não correspondem. Por favor, insira senhas iguais.
+        </div>
+        <!-- <div id="error-message-date" style="display: none; color: red;">
+            Data de nascimento inválida. Por favor, insira uma data válida (DD/MM/AAAA).
+        </div> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        document.querySelector('.submit').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            validatePasswords();
+        });
+        
+        function validatePasswords() {
+            var senha = document.getElementById('senha').value;
+            var confirmarSenha = document.getElementById('confirmar_senha').value;
+
+            if (senha === confirmarSenha) {
+                // Senhas iguais, redirecionar para a tela de login
+                redirectToLogin();
+            } else {
+                // Senhas diferentes, mostrar mensagem de erro
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+        function redirectToLogin() {
+            window.location.href = "/Tela de Login/Login.html";
+        }
+
+        function togglePasswordVisibility(inputId) {
+            var input = document.getElementById(inputId);
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        }
+        // document.querySelector('.submit').addEventListener('click', function(event) {
+        //     event.preventDefault(); // Evita o envio do formulário
+        //     validateDate();
+        // });
+
+        // function validateDate() {
+        //     var dateInput = document.getElementById('data_nascimento').value;
+        //     var datePattern = /^\d{2}\/\d{2}\/\d{4}$/;
+    
+        //     if (datePattern.test(dateInput)) {
+        //         redirectToLogin();
+        //     } else {
+        //         document.getElementById('error-message-date').style.display = 'block';
+        //     }
+        // }
+    </script>
+    <!-- <script>
+        document.querySelector('.submit').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita o envio do formulário
+            validateDate();
+        });
+
+        function validateDate() {
+            var dateInput = document.getElementById('data_nascimento').value;
+            var datePattern = /^\d{2}\/\d{2}\/\d{4}$/;
+    
+            if (datePattern.test(dateInput)) {
+                redirectToLogin();
+            } else {
+                document.getElementById('error-message-date').style.display = 'block';
+            }
+        }
+    </script> -->
+    
+</body>
+</html>
+
